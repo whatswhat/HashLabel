@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HashLabelDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYl-S2-SFD" customClass="HashLabel" customModule="HashLabelDemo" customModuleProvider="target">
+                                <rect key="frame" x="30" y="382.5" width="354" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Naa-OQ-pUq">
+                                <rect key="frame" x="30" y="513" width="354" height="33"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Action">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TtC-dZ-YDc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C08-mW-Tid">
+                                <rect key="frame" x="30" y="433" width="354" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2NE-aN-mUB">
+                                <rect key="frame" x="30" y="94" width="354" height="29"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Number"/>
+                                    <segment title="English"/>
+                                    <segment title="中文"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wij-Lo-Kwo">
+                                <rect key="frame" x="110" y="152" width="194" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Last"/>
+                                </segments>
+                                <connections>
+                                    <action selector="point:" destination="BYZ-38-t0r" eventType="valueChanged" id="CsN-fU-AHh"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="mpN-vz-4YM">
+                                <rect key="frame" x="28" y="241" width="358" height="31"/>
+                                <connections>
+                                    <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="l4m-LH-IMT"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wc2-JS-GSg">
+                                <rect key="frame" x="30" y="210" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Naa-OQ-pUq" secondAttribute="trailing" constant="30" id="3oH-Kc-gc2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wc2-JS-GSg" secondAttribute="trailing" constant="30" id="4PK-aP-SEe"/>
+                            <constraint firstItem="wij-Lo-Kwo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="4XS-eB-N3F"/>
+                            <constraint firstItem="CYl-S2-SFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6S9-a9-8de"/>
+                            <constraint firstItem="wc2-JS-GSg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="8YW-9y-Cxh"/>
+                            <constraint firstItem="2NE-aN-mUB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="8it-7u-Y1a"/>
+                            <constraint firstItem="CYl-S2-SFD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mpN-vz-4YM" secondAttribute="bottom" constant="30" id="Eiz-8j-KGk"/>
+                            <constraint firstItem="mpN-vz-4YM" firstAttribute="top" secondItem="wc2-JS-GSg" secondAttribute="bottom" constant="10" id="Kh9-he-Wcd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C08-mW-Tid" secondAttribute="trailing" constant="30" id="NnR-6U-DMf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wij-Lo-Kwo" secondAttribute="trailing" constant="110" id="UvL-Sf-Vb6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2NE-aN-mUB" secondAttribute="trailing" constant="30" id="XFi-Ke-ipa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpN-vz-4YM" secondAttribute="trailing" constant="30" id="Z7y-LL-aQP"/>
+                            <constraint firstItem="wij-Lo-Kwo" firstAttribute="top" secondItem="2NE-aN-mUB" secondAttribute="bottom" constant="30" id="bW1-8m-m1J"/>
+                            <constraint firstItem="Naa-OQ-pUq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="czg-HQ-WJJ"/>
+                            <constraint firstItem="2NE-aN-mUB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="i8W-iP-eKk"/>
+                            <constraint firstItem="C08-mW-Tid" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ipD-hs-YUH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CYl-S2-SFD" secondAttribute="trailing" constant="30" id="jL8-7E-gS9"/>
+                            <constraint firstItem="C08-mW-Tid" firstAttribute="top" secondItem="CYl-S2-SFD" secondAttribute="bottom" constant="30" id="nUH-2N-Cd7"/>
+                            <constraint firstItem="mpN-vz-4YM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qCP-J9-T4v"/>
+                            <constraint firstItem="Naa-OQ-pUq" firstAttribute="top" secondItem="C08-mW-Tid" secondAttribute="bottom" constant="50" id="qYT-bd-nFC"/>
+                            <constraint firstItem="C08-mW-Tid" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vrt-YG-Ask"/>
+                            <constraint firstItem="C08-mW-Tid" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ygu-O5-seG"/>
+                            <constraint firstItem="wc2-JS-GSg" firstAttribute="top" secondItem="wij-Lo-Kwo" secondAttribute="bottom" constant="30" id="zmx-vt-4t7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="g2T-ps-4As" appends="YES" id="iQM-uV-aoF"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="C08-mW-Tid" id="qNi-gK-xWP"/>
+                        <outlet property="label" destination="CYl-S2-SFD" id="Bue-jN-mOv"/>
+                        <outlet property="segmented" destination="2NE-aN-mUB" id="T3p-0F-PYe"/>
+                        <outlet property="slider" destination="mpN-vz-4YM" id="XIR-Ps-Vf9"/>
+                        <outlet property="sliderLabel" destination="wc2-JS-GSg" id="JOz-Fm-qcN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="g2T-ps-4As">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="dhV-dJ-S8G"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="18.75"/>
+        </scene>
+    </scenes>
+</document>
