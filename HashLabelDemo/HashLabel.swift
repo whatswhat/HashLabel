@@ -6,8 +6,9 @@
 //  Copyright © 2019 whatzwhat. All rights reserved.
 //
 //  ------------------
-// | 2019/8/27 - v0.1 第一版
-// | 2019/9/17 - v0.2 移除 GameplayKit 改用 Int.Random
+// | 2019/08/27 - v0.1 第一版
+// | 2019/09/17 - v0.2 移除 GameplayKit 改用 Int.Random
+// | 2019/10/18 - v0.3 增加白名單功能
 //  ------------------
 
 import UIKit
@@ -60,6 +61,8 @@ final class HashLabel: UILabel {
     private var progress: TimeInterval = 0
     /// 動畫變化區間
     private var timeSection: TimeInterval = 0
+    /// 白名單
+    public var whitelist: [String] = []
 
 }
 
@@ -118,8 +121,24 @@ extension HashLabel {
         // 準備容器
         var randomText = ""
         // 開始產生亂數
-        for _ in stride(from: 0, to: randomSize, by: 1) {
-            randomText += mode.value
+        for index in stride(from: 0, to: randomSize, by: 1) {
+            
+            // 確認白名單
+            let text: String
+            switch startPoint {
+            case .first:
+                let index = content.index(content.startIndex, offsetBy: abs(content.count - randomSize) + index)
+                text = String(content[index])
+            case .last:
+                let index = content.index(content.startIndex, offsetBy: index)
+                text = String(content[index])
+            }
+            
+            if whitelist.contains(text) {
+                randomText += text
+            } else {
+                randomText += mode.value
+            }
         }
         // 計算正常字元的長度
         let textCount = content.count - randomSize

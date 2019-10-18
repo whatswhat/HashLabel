@@ -24,10 +24,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sliderAction()
+        // 10 / 18 新增, 白名單
+        label.whitelist = [".", ",", "%"]
     }
     
     private func getMode() -> HashLabel.Mode {
-        print(segmented.selectedSegmentIndex)
         switch segmented.selectedSegmentIndex {
         case 1:
             return .no
