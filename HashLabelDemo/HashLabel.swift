@@ -78,6 +78,8 @@ extension HashLabel {
         recycleDisplayLink()
         if let duration = duration {
             totalTime = duration
+        } else {
+            totalTime = 3
         }
         if let mode = mode {
             self.mode = mode
